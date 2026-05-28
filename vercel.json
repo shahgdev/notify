@@ -1,7 +1,16 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.11",
+      "maxDuration": 60
+    }
+  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/lectures/:path*", "destination": "/api/index.py" },
+    { "source": "/subjects/:path*", "destination": "/api/index.py" },
+    { "source": "/uploads/:path*",  "destination": "/api/index.py" },
+    { "source": "/(.*)",            "destination": "/index.html" }
   ]
 }
