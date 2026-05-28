@@ -425,7 +425,7 @@ async def upload_editor_image(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
     
-    return {"url": f"http://localhost:8099/uploads/{file_name}"}
+    return {"url": f"/uploads/{file_name}"}
 
 
 @router.post("/{lecture_id}/explain")
