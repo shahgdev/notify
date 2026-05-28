@@ -9,9 +9,21 @@
     }
   },
   "rewrites": [
-    { "source": "/lectures/:path*", "destination": "/api/index.py" },
-    { "source": "/subjects/:path*", "destination": "/api/index.py" },
-    { "source": "/uploads/:path*",  "destination": "/api/index.py" },
-    { "source": "/(.*)",            "destination": "/index.html" }
+    {
+      "source": "/lectures/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/subjects/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
